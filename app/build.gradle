@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 21
-    buildToolsVersion "21.1.2"
+    buildToolsVersion '23.0.2'
 
     defaultConfig {
         applicationId "com.example.android.sunshine.app"
@@ -19,11 +19,12 @@ android {
     }
 
     buildTypes.each {
-        it.buildConfigField 'String', 'OPEN_WEATHER_MAP_API_KEY', b4816972a4e01270fd2476f1433c1621
+        it.buildConfigField 'String', 'OPEN_WEATHER_MAP_API_KEY', "\"b4816972a4e01270fd2476f1433c1621\""
     }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:21.0.2'
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.android.support:support-v4:21.0.3'
 }
