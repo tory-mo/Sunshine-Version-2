@@ -166,6 +166,8 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
             mHighTempView.setText(high);
             mLowTempView.setText(low);
             mHumidityView.setText(getActivity().getString(R.string.format_humidity, data.getFloat(COL_WEATHER_HUMIDITY)));
+            // For accessibility, add a content description to the icon field
+            mIconView.setContentDescription(weatherDescription);
 
             float windSpeedStr = data.getFloat(COL_WEATHER_WIND_SPEED);
             float windDirStr = data.getFloat(COL_WEATHER_DEGREES);

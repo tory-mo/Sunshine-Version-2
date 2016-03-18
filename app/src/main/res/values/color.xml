@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="grey">#ccc</color>
-    <color name="sunshine_light_blue">#ff64c2f4</color>
+    <color name="grey_64">#646464</color>
+    <color name="black">#000</color>
+    <color name="sunshine_blue">#009688</color>
+    <color name="sunshine_light_blue">#4DB6AC</color>
+    <color name="sunshine_dark_blue">#00695C</color>
 </resources>

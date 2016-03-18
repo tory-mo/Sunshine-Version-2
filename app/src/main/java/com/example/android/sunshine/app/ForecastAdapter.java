@@ -63,7 +63,10 @@ public class ForecastAdapter extends CursorAdapter {
 
 
         viewHolder.dateView.setText(Utility.getFriendlyDayString(context, cursor.getLong(ForecastFragment.COL_WEATHER_DATE)));
-        viewHolder.descriptionView.setText(cursor.getString(ForecastFragment.COL_WEATHER_DESC));
+        String description = cursor.getString(ForecastFragment.COL_WEATHER_DESC);
+        viewHolder.descriptionView.setText(description);
+        // For accessibility, add a content description to the icon field
+        viewHolder.iconView.setContentDescription(description);
 
         boolean isMertric = Utility.isMetric(context);
         viewHolder.highTempView.setText(Utility.formatTemperature(context, cursor.getDouble(ForecastFragment.COL_WEATHER_MAX_TEMP), isMertric));
